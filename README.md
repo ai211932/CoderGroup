@@ -35,8 +35,8 @@ ORM框架用的 Spring Data JPA，权限管理用的是 Spring Security。
 
 
 #### 效果图
-1、首页
-![](http://cdn.codergroup.cn/uploads/2018/6/22/saysky/1529601246869)
+1、首页(高清图片无法完整显示，缩小模糊了下)
+![](https://liuyanzhao.com/wp-content/uploads/2018/06/WX20180622-010202@2x-2-1024x629.png)
 <br/>
 2、用户个人中心(普通用户权限可用)
 ![](http://cdn.codergroup.cn/uploads/2018/6/22/saysky/1529601279202)
