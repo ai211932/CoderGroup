@@ -77,7 +77,7 @@ public class ArticleServiceImpl implements ArticleService {
             Article returnArticle = articleRepository.save(article);
             returnArticle.setGuid("/articles/" + returnArticle.getId());
             //2、修改文章数和积分
-            Long count = articleRepository.count();
+            Long count = articleRepository.countArticleSizeByUserId(article.getUser().getId());
             User originalUser = userRepository.findOne(article.getUser().getId());
             Integer reputation = originalUser.getReputation();
             originalUser.setReputation(reputation + ReputationEnum.PUBLISH_ARTICLE.getCode());
@@ -107,7 +107,7 @@ public class ArticleServiceImpl implements ArticleService {
             article.setStatus(PostStatusEnum.DELETED_POST.getCode());
             articleRepository.save(article);
             //2、修改文章数和积分
-            Long count = articleRepository.count();
+            Long count = articleRepository.countArticleSizeByUserId(article.getUser().getId());
             User originalUser = article.getUser();
             Integer reputation = originalUser.getReputation();
             originalUser.setReputation(reputation - ReputationEnum.PUBLISH_ARTICLE.getCode());
